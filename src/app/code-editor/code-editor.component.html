@@ -1,0 +1,13 @@
+<div style="height: 800px;display: flex;width: 100%">
+  <div style="width: 70%">
+  <ngx-monaco-editor (onInit)="onInit($event)" [(ngModel)]="code" [options]="editorOptions"
+                     style="height: 100%"></ngx-monaco-editor>
+  </div>
+  <div style="padding: 20px">
+    <pre>{{ output }}</pre>
+
+  </div>
+</div>
+<button (click)="runCode()">Run</button>
+
+
