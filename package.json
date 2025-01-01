@@ -20,7 +20,7 @@
     "electron:builder:linux": "ng build  && electron-builder --linux",
     "electron:build": "ng build && electron .",
     "local-run-debug": "ng build && DEBUG=electron:* electron .",
-    "postinstall": "mkdir -p ./src/assets cp -r ./node_modules/monaco-editor/ ./src/assets/monaco"
+    "postinstall": "mkdir -p ./src/assets && cp -r ./node_modules/monaco-editor/ ./src/assets/monaco"
   },
   "build": {
     "appId": "com.example.jsandbox",
