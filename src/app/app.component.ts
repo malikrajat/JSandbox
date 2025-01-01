@@ -10,5 +10,5 @@ import { CodeEditorComponent } from './code-editor/code-editor.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'electron';
+  title = 'JSandbox';
 }

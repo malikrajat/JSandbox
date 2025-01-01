@@ -19,11 +19,12 @@
     "electron:builder:mac": "ng build  && electron-builder --mac",
     "electron:builder:linux": "ng build  && electron-builder --linux",
     "electron:build": "ng build && electron .",
-    "local-run-debug": "ng build && DEBUG=electron:* electron ."
+    "local-run-debug": "ng build && DEBUG=electron:* electron .",
+    "postinstall": "cp -r ./node_modules/monaco-editor/ ./src/assets/monaco"
   },
   "build": {
-    "appId": "com.example.jsrun",
-    "productName": "jsrun",
+    "appId": "com.example.jsandbox",
+    "productName": "jsandbox",
     "directories": {
       "output": "release"
     },
@@ -36,21 +37,13 @@
       "icon": "favicon.ico"
     },
     "mac": {
-    "target": "dmg",
+      "target": "dmg",
       "icon": "favicon.ico"
-  },
-  "linux": {
-    "target": "AppImage",
+    },
+    "linux": {
+      "target": "AppImage",
       "icon": "favicon.ico"
-  },
-  "nsis": {
-    "oneClick": false,
-    "installerIcon": "favicon.ico",
-    "uninstallerIcon": "favicon.ico",
-    "uninstallerDisplayName": "RunJs_clone",
-    "license": "license.md",
-    "allowToChangeInstallationDirectory": true
-  }
+    }
   },
   "private": true,
   "dependencies": {
@@ -62,6 +55,7 @@
     "@angular/platform-browser": "^19.1.0-next.0",
     "@angular/platform-browser-dynamic": "^19.1.0-next.0",
     "@angular/router": "^19.1.0-next.0",
+    "monaco-editor": "^0.52.2",
     "ngx-monaco-editor-v2": "^19.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

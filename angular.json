@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "electron": {
+    "JSandbox": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/electron",
+            "outputPath": "dist",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -23,12 +23,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/public"
               },
               {
                 "glob": "**/*",
-                "input": "node_modules/monaco-editor/min/vs",
-                "output": "/public/monaco/vs"
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
@@ -64,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "electron:build:production"
+              "buildTarget": "JSandbox:build:production"
             },
             "development": {
-              "buildTarget": "electron:build:development"
+              "buildTarget": "JSandbox:build:development"
             }
           },
           "defaultConfiguration": "development"

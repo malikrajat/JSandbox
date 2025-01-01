@@ -13,7 +13,7 @@ function createWindow() {
             devTools: true
         }
     })
-    appWindow.loadFile('dist/electron/browser/index.html');
+    appWindow.loadFile('dist/browser/index.html');
     appWindow.on('closed', function() {
         appWindow = null
     })
