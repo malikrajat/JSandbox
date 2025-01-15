@@ -1,59 +1,111 @@
-# Electron
+# Electron Angular Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.0-next.0.
+A modern desktop application built with Electron and Angular, combining the power of web technologies with native desktop capabilities.
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+- Cross-platform desktop application
+- Built with Angular 19.1
+- Modern and responsive UI
+- Native desktop integration
+- Hot reload support during development
 
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+- Angular CLI
+- Git
+
+## 🛠️ Installation
+
+1. Clone the repository:
+```bash
+git clone [your-repository-url]
+cd [project-name]
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+## 💻 Development
+
+Start the development server:
 ```bash
 ng serve
 ```
+The application will be available at `http://localhost:4200/`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+To run the Electron application in development mode:
 ```bash
-ng generate component component-name
+npm run electron:serve
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🏗️ Building
 
+Build for production:
 ```bash
-ng generate --help
+npm run electron:build
 ```
 
-## Building
+This will create distributables in the `dist/` directory.
 
-To build the project run:
+## 🧪 Testing
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+Run unit tests:
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+Run end-to-end tests:
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📦 Available Scripts
 
-## Additional Resources
+- `ng serve` - Start the Angular development server
+- `ng build` - Build the Angular application
+- `ng test` - Run unit tests
+- `ng e2e` - Run end-to-end tests
+- `electron:serve` - Run the application in Electron development mode
+- `electron:build` - Build the application for distribution
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🏗️ Project Structure
+
+```
+├── src/                   # Source files
+│   ├── app/              # Angular application files
+│   ├── assets/           # Static assets
+│   └── electron/         # Electron main process files
+├── dist/                 # Compiled files
+└── e2e/                  # End-to-end tests
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- Your Name - *Initial work* - [YourGithub](https://github.com/yourusername)
+
+## 🙏 Acknowledgments
+
+- Angular team for the amazing framework
+- Electron team for making desktop development easier
+- All contributors who have helped this project grow
+
+---
+⭐️ If you found this project useful, please consider giving it a star on GitHub!
