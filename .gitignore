@@ -42,3 +42,4 @@ testem.log
 Thumbs.db
 /release
 /public
+/src/assets/monaco/*

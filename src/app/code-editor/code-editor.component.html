@@ -1,13 +1,36 @@
-<div style="height: 800px;display: flex;width: 100%">
-  <div style="width: 70%">
-  <ngx-monaco-editor (onInit)="onInit($event)" [(ngModel)]="code" [options]="editorOptions"
-                     style="height: 100%"></ngx-monaco-editor>
-  </div>
-  <div style="padding: 20px">
-    <pre>{{ output }}</pre>
+<!--<div style="height: 800px;display: flex;width: 100%">-->
+<!--  <div style="width: 70%">-->
+<!--  <ngx-monaco-editor (onInit)="onInit($event)" [(ngModel)]="code" [options]="editorOptions"-->
+<!--                     style="height: 100%"></ngx-monaco-editor>-->
+<!--  </div>-->
+<!--  <div style="padding: 20px">-->
+<!--    <pre>{{ output }}</pre>-->
 
+<!--  </div>-->
+<!--</div>-->
+<!--<button (click)="runCode()">Run</button>-->
+
+
+<div class="app-container">
+
+
+  <!-- Panels -->
+  <div class="panel-container">
+    <!-- Editor -->
+    <div class="editor" id="editor">
+<!--      <textarea id="codeArea">// Write your JavaScript here</textarea>-->
+        <ngx-monaco-editor class="textarea" (onInit)="onInit($event)" [(ngModel)]="code" [options]="editorOptions"
+                          style="height:101vh; padding-top: 2px" ></ngx-monaco-editor>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <button class="btn" id="runBtn" (click)="runCode()">Run</button>
+      </div>
+    </div>
+
+    <!-- Output -->
+    <div class="output" id="outputPanel">
+      <pre id="output">{{ output }}</pre>
+    </div>
   </div>
 </div>
-<button (click)="runCode()">Run</button>
-
-

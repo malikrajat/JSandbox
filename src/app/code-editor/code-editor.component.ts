@@ -7,10 +7,19 @@ import {FormsModule} from '@angular/forms';
   selector: 'app-code-editor',
   standalone: true,
   templateUrl: './code-editor.component.html',
+  styleUrl: './code-editor.component.css',
   imports: [MonacoEditorModule, FormsModule]
 })
 export class CodeEditorComponent {
-  editorOptions = { theme: 'vs-dark', language: 'javascript' };
+  editorOptions = {
+    theme: 'vs-dark',
+    automaticLayout: true,
+    readOnly: false,
+    minimap: { enabled: false },
+    scrollBeyondLastLine: false,
+    lineNumbers: 'off',
+    language: 'javascript'
+  };
   code: string = 'function x() {\nconsole.log("Hello world!");\n } \n x()';
   output: string = '';
   readonly cd = inject(ChangeDetectorRef);

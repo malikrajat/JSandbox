@@ -1,5 +1,111 @@
-.my-code-editor {
-  .editor-container {
-    height: calc(100vh - 100px);
-  }
+/*.my-code-editor {*/
+/*  .editor-container {*/
+/*    height: calc(100vh - 100px);*/
+/*  }*/
+/*}*/
+
+/* Remove any default margin or padding on the editor container */
+
+
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: white;
+  /*color: #e5e9f0;*/
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0px !important;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top: 90.9vh;
+  left: 3vh;
+}
+
+.toolbar .btn {
+  background-color: #5e81ac;
+  color: #eceff4;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.toolbar .btn:hover {
+  background-color: #4c719c;
+}
+
+/* Panel Container */
+.panel-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Editor */
+.editor {
+  flex: 1;
+  background-color: #222222;
+  /*padding: 15px;*/
+  border-right: 1px solid #3b4252;
+}
+
+.editor > .textarea {
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  color: #eceff4;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  /*padding: 10px;*/
+  border-radius: 4px;
+}
+
+/* Output */
+.output {
+  flex: 1;
+  background-color: #222222;
+  /*padding: 15px;*/
+}
+
+
+.output pre {
+  background-color: #222222;
+  color: #eceff4;
+  padding: 10px;
+  /*border-radius: 4px;*/
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Fira Code', monospace;
+  height: 100vh;
 }

@@ -1,11 +1,11 @@
 {
   "name": "jsandbox",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "app.js",
   "description": "Run js code natively in application ",
   "author": {
-    "email": "asds@sds.com",
-    "name": "Array"
+    "email": "mr.rajatmalik@gmail.com",
+    "name": "Rajat Malik"
   },
   "scripts": {
     "ng": "ng",
@@ -34,20 +34,19 @@
     ],
     "win": {
       "target": "nsis",
-      "icon": "favicon.ico"
+      "icon": "dist/browser/assets/logo.png"
     },
     "mac": {
       "target": "dmg",
-      "icon": "favicon.ico"
+      "icon": "dist/browser/assets/logo.png"
     },
     "linux": {
       "target": "AppImage",
-      "icon": "favicon.ico"
+      "icon": "dist/browser/assets/logo.png"
     }
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^19.1.0-next.0",
     "@angular/common": "^19.1.0-next.0",
     "@angular/compiler": "^19.1.0-next.0",
     "@angular/core": "^19.1.0-next.0",
